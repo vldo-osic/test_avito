@@ -1,0 +1,11 @@
+.updBtn {
+    position: fixed;
+    left: 30px;
+    top: 60px;
+    color: aquamarine;
+    font-size: 15px;
+    background: transparent;
+    border: 2px solid teal;
+    border-radius: 5px;
+    cursor: pointer;
+}

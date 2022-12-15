@@ -1,0 +1,8 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(35, 35, 35);
+}
+.mainPage {
+    text-align: center;
+}
