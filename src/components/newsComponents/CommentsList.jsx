@@ -4,21 +4,21 @@ import { useSelector, useDispatch } from 'react-redux'
 import { commentsRootFetcher } from '../../store/reducers/actionCreator'
 import { Comment } from './Comment'
 
-export const CommentsRoot = ({newsId}) => {
-
-    const {commentsRoot, isLoading, error} = useSelector(state => state.comments)
+export const CommentsList = ({newsId}) => {
+    const {commentsList, isLoading, error} = useSelector(state => state.comments)
     const dispatch = useDispatch()
 
     useEffect(() => {
         dispatch(commentsRootFetcher(newsId))
-    }, )
+    }, [])
 
     return (
         <div>
-            { isLoading && <div>Загрузка</div> }
-            { commentsRoot.map((comment, i) => 
-                <Comment key={i} id={comment.id} />
-            )}
+            { isLoading && <div>Загрузка...</div> }
+            { commentsList.map(comment => {
+                console.log(comment)
+                return <Comment key={comment.id} id={comment.id} />
+            })}
             { error && <div>Ошибка сети</div> }
         </div>
     )

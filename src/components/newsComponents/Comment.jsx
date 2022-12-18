@@ -2,7 +2,7 @@ import React from 'react'
 
 export const Comment = ({id}) => {
     return(
-        <div>
+        <div >
             {id}
         </div>
     )

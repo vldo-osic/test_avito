@@ -7,6 +7,7 @@ export const NewsItem = ({id, title, score, author, date}) => {
     return (
         <Link to={`/list/${id}`} style={{textDecoration: 'none'}}>
             <div className='newsItem'>
+                <h2> {id} </h2>
                 <h2> {title} </h2>
                 <h2> {score} </h2> 
                 <h3> {author} </h3> 

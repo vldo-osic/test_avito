@@ -17,13 +17,11 @@ import { getById } from "./fetchNews";
 
 export async function fetchCommentsRoot(newsId) {
     return getById(newsId)
+            .then(response => response.kids)
             .then(response => Promise.all(
-                response.data.children
-                    .map(comment => 
-                        getById(comment)
-                        )
+                response
+                    .map(commentId => getById(commentId))
                     )
             )
-            .then(response => console.log(response.data))
             .catch(error => error.message)
 }
