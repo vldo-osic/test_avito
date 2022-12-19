@@ -1,0 +1,45 @@
+#star {
+    margin-top: 25px;
+    position: relative;
+    display: block;
+    color: rgb(255, 255, 255);
+    width: 0px;
+    height: 0px;
+    border-right: 20px solid transparent;
+    border-bottom: 13px solid rgb(255, 255, 255);
+    border-left: 20px solid transparent;
+    transform: rotate(35deg);
+    z-index: 1;
+  }
+  #star:before {
+    border-bottom: 16px solid rgb(255, 255, 255);
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    position: absolute;
+    height: 0;
+    width: 0;
+    top: -10px;
+    left: -12.5px;
+    display: block;
+    content: '';
+    transform: rotate(-35deg);
+  }
+  #star:after {
+    position: absolute;
+    display: block;
+    color: rgb(255, 255, 255);
+    top: 0.2px;
+    left: -21px;
+    width: 0px;
+    height: 0px;
+    border-right: 20px solid transparent;
+    border-bottom: 14px solid rgb(255, 255, 255);
+    border-left: 20px solid transparent;
+    transform: rotate(-70deg);
+    content: '';
+  }
+
+
+
+
+
